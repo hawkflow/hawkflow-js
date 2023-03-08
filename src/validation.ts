@@ -110,9 +110,9 @@ export function validateMetricsItems(items: Map<string, number>) {
     throw new Error('No items set.');
   }
 
-  items.forEach((_: number, k: string) => {
+  for (const [k, _] of Object.entries(items)) {
     if (k.length > 50) {
       throw new Error(`Item key ${k} exceeded max length of 50 characters.`);
     }
-  });
+  }
 }
