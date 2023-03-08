@@ -8,6 +8,7 @@
 2. Usage:
 ```javascript
 import { HawkFlow } from 'hawkflow';
+import { setTimeout } from 'timers/promises';
 
 // Authenticate with your API key
 const hf = new HawkFlow({ 
