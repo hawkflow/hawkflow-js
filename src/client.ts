@@ -52,7 +52,7 @@ export default class Client {
     try {
       validateMetricsOptions(options);
 
-      return await this.send(options, 'exception');
+      return await this.send(options, 'metrics');
     } catch (e) {
       return (e as Error).message;
     }
@@ -62,7 +62,7 @@ export default class Client {
     try {
       validateExceptionOptions(options);
 
-      return await this.send(options, 'metrics');
+      return await this.send(options, 'exception');
     } catch (e) {
       return (e as Error).message;
     }
